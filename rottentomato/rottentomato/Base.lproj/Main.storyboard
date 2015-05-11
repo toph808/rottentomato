@@ -53,11 +53,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.69999999999999973" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="tjW-sF-0Ez">
+                                <rect key="frame" x="0.0" y="64" width="320" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.77976190476190477" green="0.77976190476190477" blue="0.77976190476190477" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dwW-WC-1S0">
+                                <rect key="frame" x="120" y="72" width="115" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconmonstr-warning-6-icon-256" id="O4m-zu-NEy">
+                                <rect key="frame" x="74" y="68" width="32" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="zEd-EU-8kF"/>
                     <connections>
+                        <outlet property="errorIconImageView" destination="O4m-zu-NEy" id="Rgm-y1-67H"/>
+                        <outlet property="errorImageView" destination="tjW-sF-0Ez" id="che-7n-XMe"/>
+                        <outlet property="errorLabel" destination="dwW-WC-1S0" id="MiM-5a-kdY"/>
                         <outlet property="tableView" destination="c9W-wc-KxL" id="hq3-Br-uXd"/>
                     </connections>
                 </viewController>
@@ -129,6 +148,9 @@
             <point key="canvasLocation" x="322" y="355"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconmonstr-warning-6-icon-256" width="256" height="256"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
